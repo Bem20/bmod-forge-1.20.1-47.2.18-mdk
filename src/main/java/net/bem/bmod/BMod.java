@@ -1,8 +1,14 @@
 package net.bem.bmod;
 
 import com.mojang.logging.LogUtils;
+import net.bem.bmod.block.ModBlocks;
+import net.bem.bmod.item.ModCreativeModTabs;
+import net.bem.bmod.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -31,6 +37,11 @@ public class BMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+
+        ModCreativeModTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -49,7 +60,9 @@ public class BMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+//        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+//            event.accept(ModItems.SAPPHIRE);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
