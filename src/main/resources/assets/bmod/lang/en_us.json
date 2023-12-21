@@ -1,7 +1,16 @@
 {
   "item.bmod.sapphire": "Sapphire",
   "item.bmod.raw_sapphire": "Raw Sapphire",
+
+  "item.bmod.sapphire_staff": "Sapphire Staff",
+
   "block.bmod.sapphire_block": "Block of Sapphire",
   "block.bmod.raw_sapphire_block": "Raw Block of Sapphire",
+
+  "block.bmod.sapphire_ore": "Sapphire Ore",
+  "block.bmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.bmod.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+  "block.bmod.nether_sapphire_ore": "Nether Sapphire Ore",
+
   "creativetab.bmod_tab": "BMod"
 }
